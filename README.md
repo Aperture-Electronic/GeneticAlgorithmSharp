@@ -26,3 +26,32 @@ After all crossover, population will be replace by filial generation.)
 that can let GA find a better solve without value locking.)
 5. Return to step 1 and redo the steps, until the solve under the precision has been found.
 
+## C# Functions Description
+Genetic Algorithm Sharp library provide some functions that you can use it easily in your applictation.
+
+### Classes
+* (initial)Chromosome: a chromosome contains some DNA fragments
+* (initial)Selection: a selection contains some chromosom
+* (Attribute)ChromosomeSerializableAttribute: A class attribute, add it to your value class, 
+to set the number of chromosome and DNA chain length for encoding.
+* ChromosomeSeriable<T>: Contains encoding and decoding function to convert the value class to selection or inverse.
+* GeneticAlgorithm<T>: Main algorithm class.
+  
+### Attribute
+**ChromosomeSerializableAttribute** 
+#### Grammar
+```csharp
+     [ChromosomeSerializable(ChromosomeCount = ..., DNAChainLength = new int[] { ..., ..., ... })]
+     class MyClass : ChromosomeSeriable<MyClass>
+     {
+        //...Class codes
+     }
+```
+#### Parameters
+ChromosomeCount: Number of chromosome in the selsction serialized by class. In general, how many variables is the class have then how many chrosomes it need.
+
+DNAChainLength: A array of integer to set DNA chain length of each chromosome. This array's length must be equal of ChromosomeCount. A length of DNA is a byte, can be store data from 0~255(or 8 bits binary). For example, if you want to storage a 32-bits float number, you need at least 4 bytes to storage it, so DNA length can be set greater than 4.
+
+
+  
+  
