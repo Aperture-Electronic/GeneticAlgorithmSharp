@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneticAlgorithm", "GeneticAlgorithm\GeneticAlgorithm.csproj", "{EBF502CB-881D-4CF1-8586-5EEE9FB3D77A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBF502CB-881D-4CF1-8586-5EEE9FB3D77A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBF502CB-881D-4CF1-8586-5EEE9FB3D77A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBF502CB-881D-4CF1-8586-5EEE9FB3D77A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBF502CB-881D-4CF1-8586-5EEE9FB3D77A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA91200B-52ED-4BF4-BDCD-3D0395D1EC79}
+	EndGlobalSection
+EndGlobal
