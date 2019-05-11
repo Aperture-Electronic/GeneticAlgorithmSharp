@@ -300,9 +300,9 @@ namespace GeneticAlgorithm
                     {
                         str += dna.ToString() + ", ";
                     }
-                    str += "], ";
+                    str = str.Trim(new char[] { ',', ' ' }) + "], ";
                 }
-                str += $"], 量化评价 = {selection.Fitness}";
+                str = str.Trim(new char[] { ',', ' ' }) + $"], 量化评价 = {selection.Fitness}";
             }
 
             return str;
@@ -327,9 +327,9 @@ namespace GeneticAlgorithm
                 {
                     str += dna.ToString() + ", ";
                 }
-                str += "], ";
+                str = str.Trim(new char[] { ',',' '}) + "], ";
             }
-            str += $"], 量化评价 = {best.Fitness}";
+            str =  str.Trim(new char[] { ',', ' ' }) + $"], 量化评价 = {best.Fitness}";
             return str;
         }
     }

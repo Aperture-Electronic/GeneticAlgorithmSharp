@@ -11,7 +11,7 @@ namespace GeneticAlgorithm
             GeneticAlgorithm<doubleXYGA> geneticAlgorithm = new GeneticAlgorithm<doubleXYGA>();
             geneticAlgorithm.Initialize(100, (i) => doubleXYGA.RandomInitialize());
 
-            for (int i = 0; i < 500; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 geneticAlgorithm.Evaluate(delegate (List<doubleXYGA> list)
                 {
@@ -19,7 +19,7 @@ namespace GeneticAlgorithm
 
                     // Function
                     IEnumerable<double> func_list = list.Select((doubleXYGA a) =>
-                      a.x * a.x - 4.0 * a.x + a.y * a.y + 9.0 * a.y - 10.0
+                      a.x * a.x - 4.0 * a.x + a.y * a.y + 9.0 * a.y - a.x * a.y - 10.0
                     );
 
                     int i = 0;
@@ -50,7 +50,7 @@ namespace GeneticAlgorithm
 
                     return baby;
                 });
-                geneticAlgorithm.Mutation(new int[] { 1, 100 }, 10);
+                geneticAlgorithm.Mutation(new int[] { 1, 100 }, 16);
 
                 Console.WriteLine($"迭代[{i}]执行完毕");
             }
